@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('./assets/fonts/Lato-Regular.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./assets/fonts/Lato-Bold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./assets/fonts/Lato-Italic.ttf');
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./assets/fonts/Lato-Light.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./assets/fonts/Lato-Hairline.ttf');
+    font-weight: 100;
+}
+
+@import './_variables.scss';
+
+body, input, button {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.font {
+    &-white {
+        color: #fff !important;
+    }
+    &-white-ts {
+        color: rgba(255, 255, 255, .5) !important;
+    }
+
+    &-hairline {
+        font-weight: 100 !important;
+    }
+
+    &-light {
+        font-weight: 400 !important;
+    }
+
+    &-regular {
+        font-weight: 600 !important;
+    }
+
+    &-bold {
+        font-weight: 800 !important;
+    }
+}
+
+.margin {
+    &-top {
+        &-15 {
+            margin-top: 15px;
+        }
+
+        &-34 {
+            margin-top: 34px;
+        }
+    }
+
+    &-bottom {
+        &-15 {
+            margin-bottom: 15px;
+        }
+
+        &-34 {
+            margin-bottom: 34px;
+        }
+    }
+}
+
+.padding {
+    &-10 {
+        padding: 10px;
+    }
+}
+
+.height {
+    &-100 {
+        height: 100%;
+    }
+}
+
+#http-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+
+    .loader-bg {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .5);
+    }
+
+    .sk-cube-grid {
+        width: 70px;
+        height: 70px;
+        margin-top: 20%;
+        
+        .sk-cube {
+            background-color: rgba(255, 255, 255, .7);
+        }
+        
+        .sk-cube7, .sk-cube8, .sk-cube9 {
+            margin-top: -1px;
+        }
+    }
+
+    .spinner-info {
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, .5);
+    }
+}
+
+.fade.show {
+    background-color: rgba(0, 0, 0, .5);
+    animation-name: fade;
+    animation-duration: .5s;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+@media all and (min-width: 992px) {
+    .lg-hide {
+        display: none !important;
+    }
+}
+
+@media all and (max-width: 991px) {
+    .xs-hide {
+        display: none !important;
+    }
+}

@@ -1,0 +1,34 @@
+@import './assets/css/_variables.scss';
+@import './assets/css/_global.scss';
+@import './assets/css/_forms.scss';
+@import './assets/css/_theme.scss';
+
+$themes: $default, $blue;
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    width: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -56px;
+    margin-top: -56px;
+    padding-top: 56px;
+}
+
+.footer {
+    height: 54px;
+}
+
+@each $theme in $themes {
+    .theme-#{map-get($theme, name)} {
+        @include themecontent($theme);
+    }
+}
