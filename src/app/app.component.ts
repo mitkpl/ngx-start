@@ -1,11 +1,10 @@
-import { AuthUserService } from './shared-account/auth-user.service';
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { ToastsManager } from "ng2-toastr/ng2-toastr";
+import { AuthUserService } from './shared/auth/auth-user.service';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
     title = 'app';
@@ -17,6 +16,6 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.authUserService.logInUserBasedOnMemory();
+        this.authUserService.authorizeFromMemory();
     }
 }

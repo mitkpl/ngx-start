@@ -1,5 +1,5 @@
-import { AuthUserService } from './../shared-account/auth-user.service';
 import { Component, OnInit } from '@angular/core';
+import { AuthUserService } from '../shared/auth/auth-user.service';
 
 @Component({
   selector: 'app-header',

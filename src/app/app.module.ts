@@ -1,7 +1,5 @@
 import { BrowserMemoryService } from './shared/browser-memory.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthUserService } from './shared-account/auth-user.service';
-import { AuthGuardService } from './shared-account/auth-guard.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,6 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { AuthGuardService } from './shared/auth/auth-guard.service';
+import { AuthUserService } from './shared/auth/auth-user.service';
 
 @NgModule({
   declarations: [
